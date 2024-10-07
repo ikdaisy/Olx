@@ -4,5 +4,4 @@ const router = Router()
 
 router.route("/add").post(rh.add)
 
-
 export default router
