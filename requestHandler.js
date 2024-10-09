@@ -66,16 +66,23 @@ export async function signIn(req,res){
 
 export async function getUser(req,res) {
    try{
-    console.log(req.params);
-    const {_id}=req.params
+    
+    const _id = req.userId
     const data=await userSchema.findOne({_id})
     console.log(data);
     
-    res.status(200).send(data)
+    res.status(200).send({user:data.username})
    }
    catch(error){
     res.status(404).send(error)
    }  
+
+    // res.send("hi")
+    // console.log(req.userId);
+    // const id = req.userId
+    
+    // res.status(200).send(id)
+    
 }
 
 

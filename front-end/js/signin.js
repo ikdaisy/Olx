@@ -22,5 +22,4 @@ document.getElementById("form").addEventListener("submit",async (e)=>{
         console.log(error);
         
     })
-
 })
